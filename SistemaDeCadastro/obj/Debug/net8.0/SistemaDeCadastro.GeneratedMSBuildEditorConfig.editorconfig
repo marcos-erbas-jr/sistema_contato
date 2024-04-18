@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Pichau\source\repos\SistemaDeCadastro\SistemaDeCadastro
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Pichau/source/repos/SistemaDeCadastro/SistemaDeCadastro/Views/Contato/criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xjcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/source/repos/SistemaDeCadastro/SistemaDeCadastro/Views/Contato/deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xkZWxldGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/source/repos/SistemaDeCadastro/SistemaDeCadastro/Views/Contato/editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xlZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/source/repos/SistemaDeCadastro/SistemaDeCadastro/Views/Contato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Pichau/source/repos/SistemaDeCadastro/SistemaDeCadastro/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
