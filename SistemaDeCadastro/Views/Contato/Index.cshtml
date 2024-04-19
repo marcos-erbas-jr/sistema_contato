@@ -1,4 +1,6 @@
-﻿
+﻿@using ControledeContatos.Models
+@model List<ContatoModel>
+
 
 @{
     ViewData["Title"] = "Listagem de Contatos";
@@ -24,7 +26,7 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
-                /*foreach (ContatoModel contato in Model)
+                foreach (ContatoModel contato in Model)
                 {
                     <tr>
                         <th scope="row">@contato.Id</th>
@@ -37,7 +39,7 @@
                                 <a role="button" class="btn btn-danger" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="deletar">Apagar</a>
                             </div>
                         </td>
-                    </tr>*/
+                    </tr>
                 }
             }
         </tbody>
