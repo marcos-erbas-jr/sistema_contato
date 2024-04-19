@@ -10,5 +10,7 @@ namespace ControledeContatos.Repositorio
 
         ContatoModel Atualizar(ContatoModel contato);
 
+        bool Deletar(int id);
+
     }
 }

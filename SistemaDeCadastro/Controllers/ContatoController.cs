@@ -27,10 +27,18 @@ namespace ControledeContatos.Controllers
             return View(contato);
         }
 
-        public IActionResult Deletar()
+        public IActionResult Deletar(int id) //Mostra o nome do contato que a pessoa deseja apagar
         {
-            return View();
+            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            return View(contato);
         }
+
+        public IActionResult Apagar(int id) //de fato apagar o contato
+        {
+            _contatoRepositorio.Deletar(id);
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {

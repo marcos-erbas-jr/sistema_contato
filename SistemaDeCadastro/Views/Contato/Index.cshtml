@@ -26,10 +26,11 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
+                int n = 1;
                 foreach (ContatoModel contato in Model)
                 {
                     <tr>
-                        <th scope="row">@contato.Id</th>
+                        <th scope="row">@n</th>
                         <td>@contato.Nome</td>
                         <td>@contato.Email</td>
                         <td>@contato.Celular</td>
@@ -40,6 +41,7 @@
                             </div>
                         </td>
                     </tr>
+                    n++;
                 }
             }
         </tbody>

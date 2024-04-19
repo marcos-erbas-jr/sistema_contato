@@ -41,6 +41,18 @@ namespace ControledeContatos.Repositorio
             return _bancoContext.Contatos.ToList();
         }
 
+        public bool Deletar(int id)
+        {
+            ContatoModel contatoDB = ListarPorId(id);
+            if (contatoDB == null) throw new Exception("Houve um erro na exclusão");
+            else
+            {
+                _bancoContext.Contatos.Remove(contatoDB);
+                _bancoContext.SaveChanges();
+                return true;
+            }
+        }
+
         public ContatoModel ListarPorId(int id)
         {
             return _bancoContext.Contatos.FirstOrDefault(b => b.Id == id);
