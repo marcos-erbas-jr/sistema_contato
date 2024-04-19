@@ -19,10 +19,31 @@ namespace ControledeContatos.Repositorio
             return contato;
         }
 
+        public ContatoModel Atualizar(ContatoModel contato)
+        {
+            ContatoModel contatoDB = ListarPorId(contato.Id);
+            if (contatoDB == null) throw new Exception("Houve um erro na atualização.");
+            else
+            {
+                contatoDB.Nome = contato.Nome;
+                contatoDB.Email = contato.Email;
+                contatoDB.Celular = contato.Celular;
+
+                _bancoContext.Contatos.Update(contatoDB);
+                _bancoContext.SaveChanges();
+                return contatoDB;
+            }
+        }
+
         public List<ContatoModel> BuscarTodos()
         {
             //Mostrar dados do banco
             return _bancoContext.Contatos.ToList();
+        }
+
+        public ContatoModel ListarPorId(int id)
+        {
+            return _bancoContext.Contatos.FirstOrDefault(b => b.Id == id);
         }
     }
 }

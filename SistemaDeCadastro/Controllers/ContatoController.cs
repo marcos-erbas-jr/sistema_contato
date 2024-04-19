@@ -21,9 +21,10 @@ namespace ControledeContatos.Controllers
         {
             return View();
         }
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            return View(contato);
         }
 
         public IActionResult Deletar()
@@ -35,6 +36,12 @@ namespace ControledeContatos.Controllers
         {
             _contatoRepositorio.Adicionar(contato);
             return RedirectToAction("criar");
+        }
+
+        public IActionResult Alterar(ContatoModel contato)
+        {
+            _contatoRepositorio.Atualizar(contato);
+            return RedirectToAction("Index");
         }
     }
 }
