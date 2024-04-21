@@ -11,6 +11,25 @@
         <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="criar">Adicionar</a>
     </div>
     <br />
+
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button tyoe="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button tyoe="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+            This is a danger alert—check it out!
+        </div>
+            @TempData["MensagemErro"]
+    }
+
+    <br />
+
     <h1 class="display-4">Listagem de Contatos</h1>
 
     <table class="table">
