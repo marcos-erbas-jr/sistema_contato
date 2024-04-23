@@ -17,6 +17,8 @@ namespace ControledeContatos.Models
         [Phone(ErrorMessage ="O celular informado não é válido.")]
         public string? Celular { get; set; }
 
+        //Observação: Todos os campos estão aceitando null por utilizar o '?' depois do tipo
+
     }
 }
 
