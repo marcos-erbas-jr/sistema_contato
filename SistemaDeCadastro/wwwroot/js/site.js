@@ -6,7 +6,13 @@
 //let table = new DataTable('#myTable'); //código desnecessário para paginação
 
 $(document).ready(function () { //Código abaixo utilizado para traduzir os elementos da paginação
-    $('#myTable').DataTable({
+
+    getDataTable('#myTable');
+    getDataTable('#TableUsers');
+});
+
+function getDataTable(id) {
+    $(id).DataTable({
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -34,7 +40,8 @@ $(document).ready(function () { //Código abaixo utilizado para traduzir os elem
             }
         }
     });
-});
+}
+
 
 $('.close-alert').click(function () { //Código usado para fechar o aviso de sucesso ou erro na página index, com efeito de saída
     $('.alert').hide('hide');

@@ -14,6 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Database")));//linha que adicionei
 
 builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();//linha que adicionei
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();//linha que adicionei
 
 var app = builder.Build();
 
