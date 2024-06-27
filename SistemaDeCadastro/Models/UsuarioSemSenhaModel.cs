@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeCadastro.Models
 {
-    public class UsuarioModel
+    public class UsuarioSemSenhaModel
     {
         public int Id {  get; set; }
 
@@ -17,15 +17,6 @@ namespace SistemaDeCadastro.Models
         [Required(ErrorMessage = "O e-mail é obrigatório.")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Digite a senha")]
-        public string Senha { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime? DataAtualizacao { get; set; }
         public PerfilEnum Perfil { get; set; }
-
-        public bool SenhaValida(string senha)
-        {
-            return Senha == senha;
-        }
     }
 }

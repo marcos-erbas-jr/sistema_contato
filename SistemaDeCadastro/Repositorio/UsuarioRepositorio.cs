@@ -39,6 +39,11 @@ namespace ControledeContatos.Repositorio
             }
         }
 
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
+
         public List<UsuarioModel> BuscarTodos()
         {
             //Mostrar dados do banco

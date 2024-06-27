@@ -1,7 +1,10 @@
 ﻿
 using ControledeContatos.Repositorio;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using SistemaDeCadastro.Enums;
 using SistemaDeCadastro.Models;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace SistemaDeCadastro.Controllers
@@ -81,13 +84,22 @@ namespace SistemaDeCadastro.Controllers
             }
         }
 
-        public IActionResult Alterar(UsuarioModel usuario)
+        public IActionResult Alterar(UsuarioSemSenhaModel usuarioSemSenhaModel)
         {
             try
             {
+                UsuarioModel usuario = null;
                 if (ModelState.IsValid)
                 {
-                    _usuarioRepositorio.Atualizar(usuario);
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenhaModel.Id,
+                        Nome = usuarioSemSenhaModel.Nome,
+                        Login = usuarioSemSenhaModel.Login,
+                        Email = usuarioSemSenhaModel.Email,
+                        Perfil = usuarioSemSenhaModel.Perfil,
+                    };
+                    usuario = _usuarioRepositorio.Atualizar(usuario);
                     TempData["MensagemSucesso"] = "Usuário editado com sucesso.";
                     return RedirectToAction("Index");
                 }

@@ -1,14 +1,14 @@
 ﻿@using ControledeContatos.Models
-@model ContatoModel
+@model UsuarioModel
 @{
-    ViewData["Title"] = "Excluir Contato";
+    ViewData["Title"] = "Excluir Usuário";
 }
 
 <div class="text-center">
 
-    <h3>Realmente deseja apagar o contato (@Model.Nome)?</h3>
+    <h3>Realmente deseja apagar o usuário (@Model.Nome)?</h3>
 
 
-    <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Apagar" asp-route-id="@Model.Id">Excluir Contato</a>
-    <a class="btn btn-secondary" role="button" asp-controller="Contato" asp-action="Index">Voltar</a>
+    <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Apagar" asp-route-id="@Model.Id">Excluir Contato</a>
+    <a class="btn btn-secondary" role="button" asp-controller="Usuario" asp-action="Index">Voltar</a>
 </div>
