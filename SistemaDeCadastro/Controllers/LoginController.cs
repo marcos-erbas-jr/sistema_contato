@@ -42,8 +42,8 @@ namespace SistemaDeCadastro.Controllers
                 {
                     UsuarioModel usuario = _usuarioRepositorio.BuscarPorLogin(loginModel.Login);
 
-                    //usuário teste: admin | senha: 123456
-                    if(usuario != null)
+                    //Administrador teste: admin | senha: 123456   / usuário teste: user | senha:123456
+                    if (usuario != null)
                     {
                         if (usuario.SenhaValida(loginModel.Senha))
                         {

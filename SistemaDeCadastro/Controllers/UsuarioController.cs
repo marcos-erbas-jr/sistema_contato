@@ -3,12 +3,14 @@ using ControledeContatos.Repositorio;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Enums;
+using SistemaDeCadastro.Filters;
 using SistemaDeCadastro.Models;
 using System.ComponentModel.DataAnnotations;
 
 
 namespace SistemaDeCadastro.Controllers
 {
+    [PaginaParaUsuarioLogado] //Filtro criado (Filters/PaginaParaUsuarioLogado) para permitir que apenas usuários logados acessem esta página
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
